@@ -1,31 +1,8 @@
 Usage
 =====
 
-Getting Started
----------------
+.. include:: ../../examples/notebooks/01_introduction.ipynb
 
-The most simple way of using the library is to interact with the Cell
-Simulation Interface, *CSI* object:
-
-.. code-block:: python
-
-   >>> from cideMOD import CSI, DEFAULTS
-   >>> csi = CSI('params.json', DEFAULTS.SIMULATION_OPTIONS.value,
-                 test_plan = DEFAULTS.TEST_PLAN.value)
-   >>> csi.run_test_plan()
-
-Specify Model Options
-----------------------
-The model options can be specified through the
-:meth:`get_model_options <cideMOD.models.model_options.get_model_options>`
-method. For example:
-
-.. code-block:: python
-
-   >>> from cideMOD import CSI, DEFAULTS, get_model_options
-   >>> options = get_model_options(model='P2D', solve_thermal=False, SEI_model='solvent_diffusion')
-   >>> csi = CSI('params.json', options, test_plan=DEFAULTS.TEST_PLAN.value)
-   >>> csi.run_test_plan()
 
 Cell Parameters
 ----------------
@@ -110,6 +87,9 @@ An example of a simple discharge with this approach is given in the
 
 .. literalinclude:: ../../examples/main.py
 
+In the folder `examples/notebooks` you can find several examples 
+configuring cideMOD simulations from a beggining to an advance level.
+
 Outputs
 --------
 There are two kind of outputs available. For each simulation, the
@@ -125,6 +105,7 @@ variables.
    The parameter :code:`store_delay` can be modified to a negative
    value to suppress this output, or to a positive value to specify the
    frequency (in timesteps) at which the results are saved to the disk.
+
 * Global variables:
    These are overall cell figures (for example; cell voltage, current,
    maximum temperature, etc...), that are calculated and saved as a
