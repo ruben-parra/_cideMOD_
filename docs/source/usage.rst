@@ -1,7 +1,7 @@
 Usage
 =====
 
-../../examples/notebooks/01_introduction.ipynb
+../../examples/notebooks/01_introduction
 
 
 Cell Parameters
