@@ -7,18 +7,7 @@ build:
    tools:
       python: "3.10"
    apt_packages:
-      - cmake
-   jobs:
-      post_install:
-         - mkdir -p /tmp/cideMOD
-         - git clone https://github.com/FEniCS/dolfinx.git /tmp/cideMOD/dolfinx
-         - mkdir -p /tmp/cideMOD/dolfinx/cpp/build
-         - cmake /tmp/cideMOD/dolfinx/cpp
-         - make install /tmp/cideMOD/dolfinx/cpp/build
-         - pip install /tmp/cideMOD/dolfinx/python
-         - git clone https://github.com/multiphenics/multiphenicsx.git /tmp/cideMOD/multiphenicsx
-         - pip install /tmp/cideMOD/multiphenicsx
-         - rm -rf /tmp/cideMOD
+      - fenicsx
 
 
 # Build the docs in additional formats
