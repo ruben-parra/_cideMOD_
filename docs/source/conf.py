@@ -64,7 +64,7 @@ autodoc_default_options = {
 autoclass_content = "both"
 
 # autosummary options
-autosummary_generate = True
+autosummary_generate = False
 autosummary_ignore_module_all = True
 
 # -- Options for HTML output -------------------------------------------------
