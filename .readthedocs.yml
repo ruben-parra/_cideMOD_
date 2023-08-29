@@ -8,9 +8,9 @@ build:
       python: "3.10"
    jobs:
       post_system_dependencies:
-         - add-apt-repository ppa:fenics-packages/fenics
-         - apt update
-         - apt install fenicsx
+         - sudo add-apt-repository ppa:fenics-packages/fenics
+         - sudo apt update
+         - sudo apt install fenicsx
 
 
 # Build the docs in additional formats
