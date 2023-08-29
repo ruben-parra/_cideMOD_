@@ -8,20 +8,18 @@ build:
     python: "3.10"
   jobs:
     post_install:
-      - mkdir -p tmp/dolfinx
-      - cd tmp/dolfinx
-      - git clone https://github.com/FEniCS/dolfinx.git .
-      - cd cpp
+      - mkdir -p tmp
+      - git clone https://github.com/FEniCS/dolfinx.git tmp/dolfinx
+      - cd tmp/dolfinx/cpp
       - cmake ../
       - make install
       - cd ../python
       - pip install .
-      - mkdir -p ../../multiphenicsx
+      - git clone https://github.com/multiphenics/multiphenicsx.git ../../multiphenicsx
       - cd ../../multiphenicsx
-      - git clone https://github.com/multiphenics/multiphenicsx.git .
       - pip install .
       - cd ../../
-      - rm -rf tmp/
+      - rm -rf tmp
 
 
 # Build the docs in additional formats
