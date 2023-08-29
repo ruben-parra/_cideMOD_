@@ -10,7 +10,6 @@ build:
       - cmake
       - petsc-dev
       - mpich
-      - pugixml
    jobs:
       post_install:
          - mkdir -p /tmp/cideMOD
