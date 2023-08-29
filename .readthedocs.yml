@@ -3,23 +3,25 @@ version: 2
 
 # Set the OS, Python version and install dolfinx and multiphenicsx
 build:
-  os: ubuntu-22.04
-  tools:
-    python: "3.10"
-  jobs:
-    post_install:
-      - mkdir -p tmp
-      - git clone https://github.com/FEniCS/dolfinx.git tmp/dolfinx
-      - cd tmp/dolfinx/cpp
-      - cmake ../
-      - make install
-      - cd ../python
-      - pip install .
-      - git clone https://github.com/multiphenics/multiphenicsx.git ../../multiphenicsx
-      - cd ../../multiphenicsx
-      - pip install .
-      - cd ../../
-      - rm -rf tmp
+   os: ubuntu-22.04
+   tools:
+      python: "3.10"
+   apt_packages:
+      - cmake
+   jobs:
+      post_install:
+         - mkdir -p tmp
+         - git clone https://github.com/FEniCS/dolfinx.git tmp/dolfinx
+         - cd tmp/dolfinx/cpp
+         - cmake ../
+         - make install
+         - cd ../python
+         - pip install .
+         - git clone https://github.com/multiphenics/multiphenicsx.git ../../multiphenicsx
+         - cd ../../multiphenicsx
+         - pip install .
+         - cd ../../
+         - rm -rf tmp
 
 
 # Build the docs in additional formats
