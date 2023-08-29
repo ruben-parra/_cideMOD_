@@ -6,11 +6,25 @@ build:
    os: ubuntu-22.04
    tools:
       python: "3.10"
+   apt_packages:
+      - cmake
+      - petsc-dev
+      - mpich
    jobs:
-      post_system_dependencies:
-         - sudo add-apt-repository ppa:fenics-packages/fenics
-         - sudo apt update
-         - sudo apt install fenicsx
+      post_install:
+         - mkdir -p /tmp/cideMOD
+         - git clone https://github.com/zeux/pugixml /tmp/cideMOD/pugixml
+         - mkdir -p /tmp/cideMOD/pugixml/build
+         - cmake /tmp/cideMOD/pugixml
+         - make install /tmp/cideMOD/pugixml/build
+         - git clone https://github.com/FEniCS/dolfinx.git /tmp/cideMOD/dolfinx
+         - mkdir -p /tmp/cideMOD/dolfinx/cpp/build
+         - cmake /tmp/cideMOD/dolfinx/cpp
+         - make install /tmp/cideMOD/dolfinx/cpp/build
+         - pip install /tmp/cideMOD/dolfinx/python
+         - git clone https://github.com/multiphenics/multiphenicsx.git /tmp/cideMOD/multiphenicsx
+         - pip install /tmp/cideMOD/multiphenicsx
+         # - rm -rf /tmp/cideMOD
 
 
 # Build the docs in additional formats
