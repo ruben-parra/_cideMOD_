@@ -8,7 +8,7 @@ build:
     python: "3.10"
   jobs:
     post_install:
-      - mkdir tmp/dolfinx
+      - mkdir -p tmp/dolfinx
       - cd tmp/dolfinx
       - git clone https://github.com/FEniCS/dolfinx.git .
       - cd cpp
@@ -16,7 +16,7 @@ build:
       - make install
       - cd ../python
       - pip install .
-      - mkdir ../../multiphenicsx
+      - mkdir -p ../../multiphenicsx
       - cd ../../multiphenicsx
       - git clone https://github.com/multiphenics/multiphenicsx.git .
       - pip install .
