@@ -6,10 +6,11 @@ build:
    os: ubuntu-22.04
    tools:
       python: "3.10"
-   pre_install:
-      - add-apt-repository ppa:fenics-packages/fenics
-      - apt update
-      - apt install fenicsx
+   jobs:
+      pre_install:
+         - add-apt-repository ppa:fenics-packages/fenics
+         - apt update
+         - apt install fenicsx
 
 
 # Build the docs in additional formats
