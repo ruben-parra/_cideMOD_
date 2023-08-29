@@ -4,5 +4,3 @@ Sphinx>=4.3.0
 sphinx-rtd-theme
 sphinxcontrib-bibtex
 git+https://github.com/multiphenics/multiphenicsx.git
-git+https://github.com/FEniCS/dolfinx.git
-.
