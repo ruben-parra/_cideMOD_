@@ -10,18 +10,14 @@ build:
       - cmake
    jobs:
       post_install:
-         - mkdir -p tmp
-         - git clone https://github.com/FEniCS/dolfinx.git tmp/dolfinx
-         - cd tmp/dolfinx/cpp
-         - cmake ../
-         - make install
-         - cd ../python
-         - pip install .
-         - git clone https://github.com/multiphenics/multiphenicsx.git ../../multiphenicsx
-         - cd ../../multiphenicsx
-         - pip install .
-         - cd ../../
-         - rm -rf tmp
+         - mkdir -p /tmp/cideMOD
+         - git clone https://github.com/FEniCS/dolfinx.git /tmp/cideMOD/dolfinx
+         - cmake /tmp/cideMOD/dolfinx
+         - make install /tmp/cideMOD/dolfinx/cpp
+         - pip install /tmp/cideMOD/dolfinx/python
+         - git clone https://github.com/multiphenics/multiphenicsx.git /tmp/cideMOD/multiphenicsx
+         - pip install /tmp/cideMOD/multiphenicsx
+         - rm -rf /tmp/cideMOD
 
 
 # Build the docs in additional formats
