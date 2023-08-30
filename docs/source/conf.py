@@ -10,7 +10,10 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-import cideMOD
+import pathlib
+import sys
+sys.path.insert(0, pathlib.Path(__file__).parents[2].joinpath('src').resolve().as_posix())
+
 
 # -- Project information -----------------------------------------------------
 
@@ -58,6 +61,7 @@ autodoc_default_options = {
     'undoc-members': True,
     'ignore-module-all': True
 }
+autodoc_mock_imports = ["dolfinx", "ufl", "mpi4py", "petsc4py", "multiphenicsx"]
 autoclass_content = "both"
 
 # autosummary options
