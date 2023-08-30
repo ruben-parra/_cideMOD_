@@ -3,4 +3,3 @@ isort
 Sphinx==7.2.4
 sphinx-rtd-theme
 sphinxcontrib-bibtex
-.
