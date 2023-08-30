@@ -66,7 +66,7 @@ autodoc_mock_imports = ["dolfinx", "ufl", "mpi4py", "petsc4py", "multiphenicsx",
                         "plotly", "ipywidgets", "tabulate", "meshio", "pygmsh"]
 
 # autosummary options
-autosummary_generate = False # raise me the right errors
+autosummary_generate = True
 autosummary_ignore_module_all = True
 
 # -- Options for HTML output -------------------------------------------------

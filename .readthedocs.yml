@@ -18,4 +18,14 @@ sphinx:
 # Declare the Python requirements required to build your documentation
 python:
    install:
-   - requirements: requirements.txt
+      - black
+      - isort
+      - Sphinx>=4.3.0
+      - sphinx-rtd-theme
+      - sphinxcontrib-bibtex
+      - numpy
+      - scipy
+      - matplotlib
+      - appdirs
+      - pydantic==1.10.11
+      - IPython
