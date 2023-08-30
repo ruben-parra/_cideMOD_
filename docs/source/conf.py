@@ -62,9 +62,11 @@ autodoc_default_options = {
     'ignore-module-all': True
 }
 autoclass_content = "both"
-autodoc_mock_imports = ["dolfinx", "ufl", "mpi4py", "petsc4py", "multiphenicsx", "gmsh"]
+autodoc_mock_imports = ["dolfinx", "ufl", "mpi4py", "petsc4py", "multiphenicsx", "gmsh", "pandas",
+                        "plotly", "ipywidgets", "tabulate", "meshio", "pygmsh"]
+
 # autosummary options
-autosummary_generate = True
+autosummary_generate = False # raise me the right errors
 autosummary_ignore_module_all = True
 
 # -- Options for HTML output -------------------------------------------------
