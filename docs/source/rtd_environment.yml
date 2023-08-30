@@ -1,0 +1,11 @@
+name: rtd_environment
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - fenics-dolfinx
+  - mpich
+  - pyvista
+  - pip:
+    - git+https://github.com/multiphenics/multiphenicsx.git
+    - git+https://github.com/cidetec-energy-storage/cideMOD.git
