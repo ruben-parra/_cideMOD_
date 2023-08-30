@@ -8,7 +8,7 @@ build:
     python: "3.10"
   jobs:
     pre_build:
-      python3 -c "import cideMOD"
+      - python3 -c "import cideMOD"
 
 # Build the docs in additional formats
 # formats:
