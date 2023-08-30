@@ -61,7 +61,8 @@ autodoc_default_options = {
     'undoc-members': True,
     'ignore-module-all': True
 }
-autodoc_mock_imports = ["dolfinx", "ufl", "mpi4py", "petsc4py", "multiphenicsx"]
+autodoc_mock_imports = ["dolfinx", "ufl", "mpi4py", "petsc4py", "multiphenicsx",
+                        "matplotlib", "scipy", "numpy"]
 autoclass_content = "both"
 
 # autosummary options
