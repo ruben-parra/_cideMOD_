@@ -1,7 +1,7 @@
 name: rtd_environment
 channels:
-  - defaults
   - conda-forge
+  - nodefaults
 dependencies:
   - python==3.10
   - pip
@@ -10,6 +10,6 @@ dependencies:
   - pip:
     - git+https://github.com/multiphenics/multiphenicsx.git
     - git+https://github.com/cidetec-energy-storage/cideMOD.git
-    - Sphinx==7.2.4
+    - Sphinx>=4.3.0
     - sphinx-rtd-theme
     - sphinxcontrib-bibtex
