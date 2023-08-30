@@ -4,15 +4,12 @@ channels:
   - conda-forge
 dependencies:
   - python==3.10
+  - pip
   - fenics-dolfinx
   - mpich
-  - pyvista
-  - pip
   - pip:
     - git+https://github.com/multiphenics/multiphenicsx.git
     - git+https://github.com/cidetec-energy-storage/cideMOD.git
-    - black
-    - isort
     - Sphinx==7.2.4
     - sphinx-rtd-theme
     - sphinxcontrib-bibtex
