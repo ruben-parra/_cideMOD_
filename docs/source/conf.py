@@ -63,7 +63,7 @@ autodoc_default_options = {
 }
 autoclass_content = "both"
 autodoc_mock_imports = ["dolfinx", "ufl", "mpi4py", "petsc4py", "multiphenicsx", "gmsh", "pandas",
-                        "plotly", "ipywidgets", "tabulate", "meshio", "pygmsh"]
+                        "plotly", "ipywidgets", "tabulate", "meshio", "pygmsh", "matplotlib"]
 
 # autosummary options
 autosummary_generate = False # raise me the right errors
