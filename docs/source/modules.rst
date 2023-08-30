@@ -2,7 +2,8 @@ API Reference
 ==============
 
 .. autosummary::
-   :toctree: generated
+   :recursive:
+   :toctree: _autosummary
 
    cideMOD.helpers
    cideMOD.numerics
